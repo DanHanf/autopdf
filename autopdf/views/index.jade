@@ -3,3 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  each company in companies
+    span
+      h2 #{company}
+      span
+        ul 
+          li 
