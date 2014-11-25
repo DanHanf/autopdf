@@ -5,6 +5,6 @@ function getPDFs(company) {
 }
 
 $(window).load(function() {
-  console.log(companies)
+  //console.log(companies)
   //getPDFs
 })

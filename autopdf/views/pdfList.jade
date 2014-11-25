@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p #{title}
+
+  each pdf in pdfs
+    ul
+      li 
+        a(href="/pdf/#{company}/#{pdf}") #{pdf}

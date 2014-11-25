@@ -28,7 +28,7 @@ app.configure('development', function(){
 });
 
 app.get('/', index.index);
-app.get('/getPDFs', index.getPDFs)
+app.get('/:company', index.getPdfList);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

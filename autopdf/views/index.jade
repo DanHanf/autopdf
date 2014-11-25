@@ -5,7 +5,8 @@ block content
   p Welcome to #{title}
   each company in companies
     span
-      h2 #{company}
+      h2 
+        a(href='/#{company}') #{company}
       span
         ul 
           li 

@@ -24,3 +24,11 @@ exports.getPDFs = function(req, res) {
     res.send(pdfs)
   })
 }
+
+exports.getPdfList = function(req, res) {
+  var company = req.params.company
+  fs.readdir(__dirname+'/../public/pdf/'+company+'/', function(err, pdfs) {
+    console.log(pdfs)
+    res.render('pdfList', {title: company+"'s PDFs", pdfs:pdfs, company:company})
+  })
+}
