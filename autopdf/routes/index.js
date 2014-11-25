@@ -1,5 +1,6 @@
 var fs = require('fs')
   , _ = require('lodash')
+  , path = require('path')
 /*
  * GET home page.
  */
@@ -26,9 +27,14 @@ exports.getPDFs = function(req, res) {
 }
 
 exports.getPdfList = function(req, res) {
+  var good = []
   var company = req.params.company
   fs.readdir(__dirname+'/../public/pdf/'+company+'/', function(err, pdfs) {
-    console.log(pdfs)
-    res.render('pdfList', {title: company+"'s PDFs", pdfs:pdfs, company:company})
+    pdfs.forEach(function(pdf) {
+      if(path.extname(pdf) === '.pdf' || path.extname(pdf) === '.PDF' || path.extname(pdf) === '.Pdf') {
+        good.push(pdf)
+      }
+    })
+    res.render('pdfList', {title: company+"'s PDFs", pdfs:good, company:company})
   })
 }
