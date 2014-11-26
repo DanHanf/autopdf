@@ -7,8 +7,7 @@ var fs = require('fs')
 
 exports.index = function(req, res){
   eachCompany(function(err, content) {
-    console.log(content)
-    res.render('index', { title: 'Express', companies:content });
+    res.render('index', { title: 'WELCOME TO AUTO_PDF_SERV_BOT', companies:content });
   })
 };
 

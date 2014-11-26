@@ -2,11 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
   each company in companies
     span
       h2 
         a(href='/#{company}') #{company}
-      span
-        ul 
-          li 
