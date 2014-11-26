@@ -4,8 +4,10 @@ block content
   h1= title
 
   form(action='/uploadPdf/#{company}', method='post', enctype='multipart/form-data')
-    input(type='file', name='toAdd')
+    input(type='file', name='toAdd' accept=".pdf,.PDF,.Pdf")
     input(type='submit')
+
+  hr
 
   each pdf in pdfs
     ul

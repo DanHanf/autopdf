@@ -2,6 +2,13 @@
 
 *~a dynamically generated and sorted list of pdfs since 2014~*
 
+you don't have to do all that stuff anymore!
+* if you're trying to upload a pdf for an org that doesn't exist you gotta create it
+	* otherwise just go ahead and click on the org you want
+* upload any ol' pdf your little heart desires
+
+
+~~this is what you gotta do~~
 * find the pdf you want 
 * drive your little internet car to autopdf/public/pdfs 
 * if a directory for who the pdf belongs to does not exist, go ahead and create it

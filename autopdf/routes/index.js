@@ -41,18 +41,18 @@ exports.getPdfList = function(req, res) {
 exports.newOrg = function(req, res) {
   var name = req.body.name
   fs.mkdir(__dirname+'/../public/pdf/'+name, function(err) {
-    res.redirect('/')
+    if(err) throw err
+    res.redirect('back')
   })
 }
 
 exports.upload = function(req, res) {
   var file = req.files.toAdd
-  console.log(req.params.company)
   fs.readFile(file.path, function(err, data) {
-    if(err){console.log(err)}
+    if(err) throw err
     var newPath = __dirname+'/../public/pdf/'+req.params.company+'/'+file.name
     fs.writeFile(newPath, data, function(err) {
-      if(err){console.log(err)}
+      if(err) throw err
       res.redirect('back')
     })
   })

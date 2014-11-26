@@ -9,7 +9,3 @@ function newOrg() {
     $.post('/newOrg', {name:name})
   }
 }
-
-function uploadPdf() {
-  
-}
