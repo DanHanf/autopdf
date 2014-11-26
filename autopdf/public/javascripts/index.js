@@ -1,10 +1,15 @@
-function getPDFs(company) {
-  $.get('/getPDFs', {company:company}, function(res) {
-    console.log(res)
-  })
+
+function newOrg() {
+  var name = document.getElementById('name').value
+  if(name === '') {
+    alert('you gotta actually type something here')
+  }
+  else {
+    console.log('nice')
+    $.post('/newOrg', {name:name})
+  }
 }
 
-$(window).load(function() {
-  //console.log(companies)
-  //getPDFs
-})
+function uploadPdf() {
+  
+}

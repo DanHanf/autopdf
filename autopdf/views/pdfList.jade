@@ -3,6 +3,10 @@ extends layout
 block content
   h1= title
 
+  form(action='/uploadPdf/#{company}', method='post', enctype='multipart/form-data')
+    input(type='file', name='toAdd')
+    input(type='submit')
+
   each pdf in pdfs
     ul
       li 

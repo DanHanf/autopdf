@@ -3,6 +3,12 @@ extends layout
 block content
   h1= title
 
+  p
+    input#name(type='text')
+    button#new(onclick='newOrg()') make new org
+
+  hr
+
   each company in companies
     span
       h2 
