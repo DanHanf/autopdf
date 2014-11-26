@@ -1,1 +1,0 @@
-echo "nodemon /Users/"$USER"/Documents/autopdf/autopdf/app.js" > n.command; chmod +x n.command;cd /Users/"$USER"/Documents/autopdf/autopdf/ & open n.command
