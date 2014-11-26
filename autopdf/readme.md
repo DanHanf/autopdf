@@ -1,4 +1,5 @@
 **welcome to auto_pdf_serv_bot**
+
 *~a dynamically generated and sorted list of pdfs since 2014~*
 
 * find the pdf you want 
@@ -9,3 +10,6 @@
 	* remember, the light from a computer screen can get trapped inside your head and hella bang on your eyelids all night if you fall asleep with the computer on. 
 	* try reading a book instead
 	* *don't worry!* the book you read can be about computers. as long as it's actually a book, your eyelids won't get hella banged on throughout the night
+	
+
+*if you gotta start this app just type in forever start app.js and there you go*
