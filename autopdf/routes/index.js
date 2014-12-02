@@ -7,7 +7,7 @@ var fs = require('fs')
 
 exports.index = function(req, res){
   eachCompany(function(err, content) {
-    res.render('index', { title: 'WELCOME TO AUTO_PDF_SERV_BOT', companies:content });
+    res.render('index', { title: 'WELCOME TO AUTO_PDF_SERV_BOT'});
   })
 };
 
@@ -56,4 +56,17 @@ exports.upload = function(req, res) {
       res.redirect('back')
     })
   })
+}
+
+exports.companyList = function(req, res) {
+  eachCompany(function(err, content) {
+    res.render('companyList', {title:'WELCOME TO AUTO_PDF_SERV_BOT', companies: content})
+  })
+}
+
+exports.loginPage = function(req, res) {
+  res.render('login', {title: 'this is the log in page'})
+}
+exports.loginPost = function(req, res) {
+  res.redirect('companyList')
 }

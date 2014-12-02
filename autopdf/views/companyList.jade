@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+
+  p
+    input#name(type='text')
+    button#new(onclick='newOrg()') make new org
+
+  hr
+
+  each company in companies
+    span
+      ul
+        li
+          h2 
+            a(href='/#{company}') #{company}
