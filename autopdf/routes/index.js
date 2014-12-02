@@ -70,3 +70,7 @@ exports.loginPage = function(req, res) {
 exports.loginPost = function(req, res) {
   res.redirect('companyList')
 }
+exports.logout = function(req, res) {
+  req.logout();
+  res.redirect('/');
+}

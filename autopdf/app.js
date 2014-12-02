@@ -78,7 +78,8 @@ passport.use(new LocalStrategy(
 
 app.get('/', index.index);
 app.get('/login', index.loginPage);
-app.get('/companyList', ensureLoggedIn('/login'), index.companyList)
+app.get('/logout', index.logout);
+app.get('/companyList', ensureLoggedIn('/login'), index.companyList);
 app.get('/:company', ensureLoggedIn('/login'), index.getPdfList);
 app.post('/newOrg', index.newOrg);
 app.post('/uploadPdf/:company', index.upload);
