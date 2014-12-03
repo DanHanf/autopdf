@@ -37,7 +37,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-var users = [{id: 1, username: 'user', password: 'password'}]
+var users = config.users
 
 function findUser(username, done) {
   for(var i = 0; i<users.length;i++) {
