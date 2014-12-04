@@ -42,7 +42,7 @@ exports.newOrg = function(req, res) {
   var name = req.body.name
   fs.mkdir(__dirname+'/../public/pdf/'+name, function(err) {
     if(err) throw err
-    res.redirect('back')
+      res.send({message:'okay'})
   })
 }
 

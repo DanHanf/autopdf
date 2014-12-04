@@ -76,7 +76,7 @@ passport.use(new LocalStrategy(
     })
   }))
 
-app.get('/', index.index);
+app.get('/', ensureLoggedIn('/login'), index.companyList);
 app.get('/login', index.loginPage);
 app.get('/logout', index.logout);
 app.get('/companyList', ensureLoggedIn('/login'), index.companyList);

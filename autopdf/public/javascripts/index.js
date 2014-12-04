@@ -5,7 +5,8 @@ function newOrg() {
     alert('you gotta actually type something here')
   }
   else {
-    console.log('nice')
-    $.post('/newOrg', {name:name})
+    $.post('/newOrg', {name:name}, function() {
+      document.location.reload()
+    })
   }
 }
