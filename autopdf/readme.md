@@ -8,7 +8,6 @@ this is what you gotta do:
 * go to the home page and log in
 	* initial credentials are user/password
 * once you're in there you can create a group by typing the name of the group into the text box and clicking the button
-	* you gotta reload the page for the group to show up because of a bug i have forgotten to fix until just now
 * click on the group's name to go to their page. 
 	* here you can see all pdfs you've uploaded for the group
 * upload a pdf to that group's page by using the normal way you upload files onto the internet
